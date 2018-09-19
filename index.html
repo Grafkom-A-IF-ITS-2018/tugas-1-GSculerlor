@@ -167,11 +167,12 @@
 
                 if (sumbu == 0) {
                     mat4.rotate(mvMatrix, mvMatrix, glMatrix.toRadian(rTri), [1.0, 0.0, 0.0])
-                    mat4.translate(mvMatrix, mvMatrix, [0, 0.0, 0.0])
+                    mat4.translate(mvMatrix, mvMatrix, [0.0, 0.0, 0.0])
 
                 } else {
                     mat4.rotate(mvMatrix, mvMatrix, glMatrix.toRadian(rTri), [0.0, 1.0, 0.0])
-                    mat4.translate(mvMatrix, mvMatrix, [0, -5, 0.0])
+                    mat4.translate(mvMatrix, mvMatrix, [0.0, -5, 0.0])
+                    mat4.scale(mvMatrix, mvMatrix, [2, 2, 0.0])
                 }
 
                 gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer)
